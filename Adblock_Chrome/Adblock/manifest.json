@@ -1,0 +1,15 @@
+{
+  "name": "Adblock for Chrome",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Adblock for Chrome",
+  "action": {},
+  "background": {
+    "service_worker": "scripts/main.js"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting"
+  ]
+}
