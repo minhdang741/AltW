@@ -21,6 +21,8 @@ chrome.tabs.onCreated.addListener(async (newTab) => {
     console.log('pending Url: ', newTab.pendingUrl);
     if(!newTab.pendingUrl) {
         chrome.tabs.remove(newTab.id);
+    } else {
+        console.log('test');
     }
 });
 
