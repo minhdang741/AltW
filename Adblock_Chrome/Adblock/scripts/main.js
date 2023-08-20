@@ -11,18 +11,15 @@
 //     console.log('enabled: ', isEnabled);
 //     window.open("www.google.com","_blank");
 // });
-
-
+ 
 /** 
  * Close any new tab that not having pending url (ad)
  * */
 chrome.tabs.onCreated.addListener(async (newTab) => {
     console.log('newTab: ', newTab);
     console.log('pending Url: ', newTab.pendingUrl);
-    if(!newTab.pendingUrl) {
+    if(!newTab.pendingUrl && newTab.title == '') {
         chrome.tabs.remove(newTab.id);
-    } else {
-        console.log('test');
     }
 });
 
