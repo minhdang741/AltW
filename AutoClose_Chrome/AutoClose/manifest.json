@@ -1,15 +1,18 @@
 {
-  "name": "Adblock for Chrome",
+  "name": "AltW for Chrome",
   "version": "1.0",
   "manifest_version": 3,
-  "description": "Adblock for Chrome",
-  "action": {},
+  "description": "Auto Close for Chrome",
+  "action": {
+    "default_popup": "popup.html"
+  },
   "background": {
     "service_worker": "scripts/main.js"
   },
   "permissions": [
     "tabs",
     "activeTab",
-    "scripting"
+    "scripting",
+    "storage"
   ]
 }
